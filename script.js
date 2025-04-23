@@ -1,21 +1,3 @@
-/*************************************
-* MANAGE ACTIVE NAVBAR LINK ON CLICK *
-*************************************/
-
-const navLinks = document.querySelectorAll(".nav-link");
-
-// Loop through each navigation link.
-navLinks.forEach(function (link) {
-	link.addEventListener("click", function () {
-		// Remove the "active" class from all nav links.
-		navLinks.forEach(link => link.classList.remove("active"));
-
-		// Add the "active" class to the clicked link.
-		this.classList.add("active");
-	});
-});
-
-
 /***********************************************
 * CALCULATE HEADER HEIGHT FOR SECTIONS PADDING *
 ***********************************************/
