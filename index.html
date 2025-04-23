@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -49,9 +49,31 @@
     <!-- MAIN -->
     <main>
         <!-- About section (À propos) -->
-        <section id="about">
+        <section id="about" class="min-vh-100 d-flex justify-content-center align-items-center text-center bg-white">
             <div class="container">
-                <h2>About</h2>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-12 col-lg-8">
+                        <h2 class="visually-hidden">About</h2>
+
+                        <img class="m-0 mb-5 p-0 rounded-circle border border-2 border-primary shadow-sm" width="175" height="175" src="./assets/images/profile_picture.webp" loading="lazy" alt="Photo de profil">
+
+                        <h1 class="mb-3 display-5 fw-bold">Fabien Chavonet</h1>
+
+                        <p class="mb-5 lead text-muted">
+                            Après un parcours atypique et riche en expériences, je me consacre aujourd’hui au développement full-stack. Formé à la <a class="link-primary link-underline-opacity-0" href="https://www.holbertonschool.fr/" target="_blank">Holberton School</a>, je mets ma rigueur, ma créativité et ma capacité d’adaptation au service de solutions web modernes et porteuses de sens.
+                        </p>
+
+                        <div class="d-flex flex-column flex-lg-row justify-content-center gap-3">
+                            <button class="me-lg-3 btn btn-primary" disabled>
+                                <i class="me-2 bi bi-file-earmark-person-fill"></i>Mon C.V.
+                            </button>
+
+                            <button class="btn btn-outline-dark" onclick="window.location.href = '#works';">
+                                <i class="me-2 bi bi-laptop"></i>Mes réalisations
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
