@@ -1,11 +1,34 @@
 /* RESET */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
 
+/* VARIABLES */
+:root {
+    --primary-color: rgb(15, 100, 250);
+}
+
+/* HEADER */
+.active {
+    color: var(--primary-color) !important;
+}
+
+/* TEMP. */
 section {
     height: 100svh;
+}
+
+/* FOOTER */
+footer a {
+    transition: transform 0.2s ease-in-out;
+}
+
+footer a:hover {
+    transform: translateY(-0.25rem);
+    color: var(--primary-color) !important;
 }
