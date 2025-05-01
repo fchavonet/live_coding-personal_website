@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fabien Chavonet - Personal Website</title>
+    <title>Fabien Chavonet - Développeur Full Stack</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
@@ -23,24 +23,53 @@
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100" tabindex="0">
     <!-- HEADER -->
-    <header class="fixed-top bg-white shadow-sm">
+    <header class="p-2 fixed-top shadow-sm">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <!-- Brand -->
                 <a class="navbar-brand" href="#about">Fabien Chavonet</a>
 
-                <!-- Toggle Button (for mobile) -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <!-- Responsive buttons -->
+                <div class="d-lg-none">
+                    <!-- Menu toggle Button -->
+                    <button class="btn fs-3 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle button">
+                        <i class="bi bi-list"></i>
+                    </button>
+
+                    <span>|</span>
+
+                    <!-- Theme toggle button -->
+                    <button class="theme-toggler btn border-0" type="button">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
 
                 <!-- Menu -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbar-nav">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" href="#about">À propos</a>
-                        <a class="nav-link" href="#works">Portfolio</a>
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </div>
+                <div id="navbar-nav" class="collapse navbar-collapse justify-content-end align-items-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#about">À propos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#works">Réalisation</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <span class="nav-link d-none d-lg-block">|</span>
+                        </li>
+
+                        <li class="nav-item d-none d-lg-block">
+                            <!-- Theme toggle button -->
+                            <button class="nav-link theme-toggler btn border-0" type="button">
+                                <i class="bi bi-moon-fill"></i>
+                            </button>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -49,38 +78,35 @@
     <!-- MAIN -->
     <main>
         <!-- About section (À propos) -->
-        <section id="about" class="min-vh-100 d-flex justify-content-center align-items-center text-center bg-white">
+        <section id="about" class="min-vh-100 d-flex justify-content-center align-items-center text-center">
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 col-lg-8">
-                        <h2 class="visually-hidden">About</h2>
-
-                        <img class="m-0 mb-5 p-0 rounded-circle border border-2 border-primary shadow-sm" width="175" height="175" src="./assets/images/profile_picture.webp" loading="lazy" alt="Photo de profil">
-
-                        <h1 class="mb-3 display-5 fw-bold">Fabien Chavonet</h1>
+                        <h1 class="display-5 m-0 fw-bold">Fabien Chavonet</h1>
+                        <h2 class="display-5 mb-3 ">Développeur Full Stack</h2>
 
                         <p class="mb-5 lead text-muted">
-                            Après un parcours atypique et riche en expériences, je me consacre aujourd’hui au développement full-stack. Formé à la <a class="link-primary link-underline-opacity-0" href="https://www.holbertonschool.fr/" target="_blank">Holberton School</a>, je mets ma rigueur, ma créativité et ma capacité d’adaptation au service de solutions web modernes et porteuses de sens.
+                            Après un parcours atypique et riche en expériences, je me consacre aujourd’hui au développement Full Stack. Formé à la <a href="https://www.holbertonschool.fr/" target="_blank">Holberton School</a>, je mets ma rigueur, ma créativité et ma capacité d’adaptation au service de solutions web modernes et porteuses de sens.
                         </p>
 
                         <div class="d-flex flex-column flex-lg-row justify-content-center gap-3">
-                            <button class="me-lg-3 btn btn-primary" disabled>
-                                <i class="me-2 bi bi-file-earmark-person-fill"></i>Mon C.V.
+                            <button class="btn btn-primary">
+                                <i class="bi bi-file-earmark-person-fill me-2 "></i>Mon C.V.
                             </button>
 
-                            <button class="btn btn-outline-dark" onclick="window.location.href = '#works';">
-                                <i class="me-2 bi bi-laptop"></i>Mes réalisations
-                            </button>
+                            <a id="works-btn" class="btn" href="#works">
+                                <i class="bi bi-laptop me-2 "></i>Mes réalisation
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Works section (Portfolio) -->
+        <!-- Works section (Réalisations) -->
         <section id="works">
             <div class="container">
-                <h2>Works</h2>
+                <h2>Réalisations</h2>
             </div>
         </section>
 
@@ -93,19 +119,21 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="text-center border-top">
+    <footer class="text-center">
         <div class="container py-4">
             <!-- Social media links -->
-            <div class="mb-2 d-flex justify-content-center align-items-center">
-                <a class="me-4  d-block fs-4 text-dark" href="https://github.com/fchavonet" target="_blank"><i class="bi bi-github"></i></a>
+            <div class="d-flex justify-content-center align-items-center mb-2 ">
+                <a class="nav-link d-block me-4 fs-4" href="https://github.com/fchavonet" target="_blank"><i class="bi bi-github"></i></a>
 
-                <a class="me-4 d-block fs-4 text-dark" href="https://www.instagram.com/pandolowitz/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a class="nav-link d-block me-4 fs-4" href="https://www.instagram.com/pandolowitz/" target="_blank"><i class="bi bi-instagram"></i></a>
 
-                <a class="d-block fs-4 text-dark" href="https://www.linkedin.com/in/fchavonet/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a class="nav-link d-block fs-4" href="https://www.linkedin.com/in/fchavonet/" target="_blank"><i class="bi bi-linkedin"></i></a>
             </div>
 
             <!-- Cpyright -->
-            <p class="m-0 p-0"><i class="bi bi-c-circle"></i> 2025 Fabien Chavonet</p>
+            <p class="m-0 p-0">
+                <i class="bi bi-c-circle me-2 "></i>2025 Fabien Chavonet
+            </p>
         </div>
     </footer>
 </body>

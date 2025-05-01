@@ -10,25 +10,105 @@
 
 /* VARIABLES */
 :root {
-    --primary-color: rgb(15, 100, 250);
+    /* Light mode */
+    --light-background-color: rgb(255, 255, 255);
+    --light-header-background-color: rgba(249, 249, 249, 0.5);
+    --light-section-background-color: rgb(249, 249, 249);
+    --light-text-color: rgb(0, 0, 0);
+
+    /* Dark mode */
+    --dark-background-color: rgb(0, 0, 0);
+    --dark-header-background-color: rgba(29, 29, 29, 0.5);
+    --dark-section-background-color: rgb(13, 13, 13);
+    --dark-text-color: rgb(255, 255, 255);
+
+    /* General */
+    --backdrop-blur: 0.5rem;
+    --primary-color: rgb(13, 110, 253);
 }
 
-/* HEADER */
-.active {
-    color: var(--primary-color) !important;
-}
-
-/* TEMP. */
+/* GENERAL */
 section {
     height: 100svh;
 }
 
-/* FOOTER */
-footer a {
+p a {
+    text-decoration: none;
+    color: var(--primary-color) !important;
+}
+
+/* LIGHT MODE */
+[data-bs-theme="light"] body {
+    background-color: var(--light-background-color);
+    color: var(--light-text-color);
+    transition: background-color 0.1s ease-in-out;
+}
+
+[data-bs-theme="light"] header {
+    background-color: var(--light-header-background-color);
+    color: var(--light-text-color);
+    backdrop-filter: blur(var(--backdrop-blur));
+    -webkit-backdrop-filter: blur(var(--backdrop-blur));
+    transition: background-color 0.1s ease-in-out;
+}
+
+[data-bs-theme="light"] .active {
+    color: var(--primary-color) !important;
+}
+
+[data-bs-theme="light"] #works {
+    background-color: var(--light-section-background-color);
+    transition: background-color 0.1s ease-in-out;
+}
+
+[data-bs-theme="light"] footer {
+    background-color: var(--light-section-background-color);
+    transition: background-color 0.1s ease-in-out;
+}
+
+[data-bs-theme="light"] footer a {
     transition: transform 0.2s ease-in-out;
 }
 
-footer a:hover {
+[data-bs-theme="light"] footer a:hover {
     transform: translateY(-0.25rem);
+    color: var(--primary-color);
+}
+
+/* DARK MODE */
+[data-bs-theme="dark"] body {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+    transition: background-color 0.1s ease-in-out;
+}
+
+[data-bs-theme="dark"] header {
+    background-color: var(--dark-header-background-color);
+    color: var(--dark-text-color);
+    backdrop-filter: blur(var(--backdrop-blur));
+    -webkit-backdrop-filter: blur(var(--backdrop-blur));
+    transition: background-color 0.1s ease-in-out;
+}
+
+[data-bs-theme="dark"] .active {
     color: var(--primary-color) !important;
+}
+
+[data-bs-theme="dark"] #works {
+    background-color: var(--dark-section-background-color);
+    transition: background-color 0.1s ease-in-out;
+}
+
+[data-bs-theme="dark"] footer {
+    background-color: var(--dark-section-background-color);
+    transition: background-color 0.1s ease-in-out;
+}
+
+[data-bs-theme="dark"] footer a {
+    transition: transform 0.2s ease-in-out;
+}
+
+[data-bs-theme="dark"] footer a:hover {
+    transform: translateY(-0.25rem);
+    color: var(--primary-color);
 }
