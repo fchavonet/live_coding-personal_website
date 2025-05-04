@@ -1,4 +1,4 @@
-/* RESET */
+/* RESET CSS */
 *,
 *::before,
 *::after {
@@ -11,20 +11,21 @@
 /* VARIABLES */
 :root {
     /* Light mode */
-    --light-background-color: rgb(255, 255, 255);
-    --light-header-background-color: rgba(249, 249, 249, 0.5);
-    --light-section-background-color: rgb(249, 249, 249);
-    --light-text-color: rgb(0, 0, 0);
+    --light-background-color: rgb(250, 250, 250);
+    --light-header-background-color: rgba(245, 245, 245, 0.5);
+    --light-section-background-color: rgb(245, 245, 245);
+    --light-text-color: rgb(10, 10, 10);
 
     /* Dark mode */
-    --dark-background-color: rgb(0, 0, 0);
-    --dark-header-background-color: rgba(29, 29, 29, 0.5);
-    --dark-section-background-color: rgb(13, 13, 13);
-    --dark-text-color: rgb(255, 255, 255);
+    --dark-background-color: rgb(5, 5, 5);
+    --dark-header-background-color: rgba(25, 25, 25, 0.5);
+    --dark-section-background-color: rgb(25, 25, 25);
+    --dark-text-color: rgb(250, 250, 250);
 
     /* General */
+    --primary-color: rgb(15, 110, 255);
+    --decondary-color: ;
     --backdrop-blur: 0.5rem;
-    --primary-color: rgb(13, 110, 253);
 }
 
 /* GENERAL */
@@ -37,13 +38,22 @@ p a {
     color: var(--primary-color) !important;
 }
 
-/* LIGHT MODE */
+.theme-toggler {
+    margin-top: 0.1rem;
+}
+
+/*************
+* LIGHT MODE *
+*************/
+
+/* GENERAL */
 [data-bs-theme="light"] body {
     background-color: var(--light-background-color);
     color: var(--light-text-color);
     transition: background-color 0.1s ease-in-out;
 }
 
+/* HEADER */
 [data-bs-theme="light"] header {
     background-color: var(--light-header-background-color);
     color: var(--light-text-color);
@@ -56,11 +66,13 @@ p a {
     color: var(--primary-color) !important;
 }
 
+/* WORKS SECTION */
 [data-bs-theme="light"] #works {
     background-color: var(--light-section-background-color);
     transition: background-color 0.1s ease-in-out;
 }
 
+/* FOOTER */
 [data-bs-theme="light"] footer {
     background-color: var(--light-section-background-color);
     transition: background-color 0.1s ease-in-out;
@@ -75,13 +87,18 @@ p a {
     color: var(--primary-color);
 }
 
-/* DARK MODE */
+/************
+* DARK MODE *
+************/
+
+/* GENERAL */
 [data-bs-theme="dark"] body {
     background-color: var(--dark-background-color);
     color: var(--dark-text-color);
     transition: background-color 0.1s ease-in-out;
 }
 
+/* HEADER */
 [data-bs-theme="dark"] header {
     background-color: var(--dark-header-background-color);
     color: var(--dark-text-color);
@@ -94,11 +111,13 @@ p a {
     color: var(--primary-color) !important;
 }
 
+/* WORKS SECTION */
 [data-bs-theme="dark"] #works {
     background-color: var(--dark-section-background-color);
     transition: background-color 0.1s ease-in-out;
 }
 
+/* FOOTER */
 [data-bs-theme="dark"] footer {
     background-color: var(--dark-section-background-color);
     transition: background-color 0.1s ease-in-out;
