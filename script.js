@@ -59,15 +59,19 @@ themeTogglers.forEach(function (themeToggler) {
 ***********************************************/
 
 const header = document.querySelector("header");
-const sections = document.querySelectorAll("section");
+// const sections = document.querySelectorAll("section");
+const aboutSection = document.getElementById("about");
 
 function updateSectionsPadding() {
 	// Get the header's current height.
 	const headerHeight = header.offsetHeight;
+
 	// Set all the section's top padding equal to the header height.
-	sections.forEach(function (section) {
-		section.style.paddingTop = headerHeight + "px";
-	});
+	// sections.forEach(function (section) {
+	// 	section.style.paddingTop = headerHeight + "px";
+	// });
+
+	aboutSection.style.paddingTop = headerHeight - 32 + "px";
 }
 
 // Update padding on load and when the window is resized.

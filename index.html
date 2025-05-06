@@ -21,7 +21,7 @@
     <script src="./script.js" defer></script>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target=".navbar">
     <!-- HEADER -->
     <header class="p-2 fixed-top shadow-sm">
         <nav class="navbar navbar-expand-lg">
@@ -32,14 +32,14 @@
                 <!-- Responsive buttons -->
                 <div class="d-lg-none">
                     <!-- Menu toggle Button -->
-                    <button class="btn fs-3 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle button">
+                    <button class="btn fs-3 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Menu toggle button">
                         <i class="bi bi-list"></i>
                     </button>
 
                     <span>|</span>
 
                     <!-- Theme toggle button -->
-                    <button class="theme-toggler btn border-0" type="button">
+                    <button class="theme-toggler btn border-0" type="button"  aria-label="Theme toggle button">
                         <i class="bi bi-moon-fill"></i>
                     </button>
                 </div>
@@ -52,7 +52,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#works">Réalisations</a>
+                            <a class="nav-link" href="#works">Mes réalisations</a>
                         </li>
 
                         <li class="nav-item">
@@ -65,7 +65,7 @@
 
                         <li class="nav-item d-none d-lg-block">
                             <!-- Theme toggle button -->
-                            <button class="nav-link theme-toggler btn border-0" type="button">
+                            <button class="nav-link theme-toggler btn border-0" type="button"  aria-label="Theme toggle button">
                                 <i class="bi bi-moon-fill"></i>
                             </button>
                         </li>
@@ -82,15 +82,15 @@
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 col-lg-8">
-                        <h1 class="display-5 m-0 fw-bold">Fabien Chavonet</h1>
-                        <h2 class="display-5 mb-3 ">Développeur Full Stack</h2>
+                        <h1 class="display-5 m-0 fw-lighter">Fabien Chavonet</h1>
+                        <h2 class="display-4 display-lg-2 mb-3 fw-bold gradient-text">Développeur Full Stack</h2>
 
                         <p class="mb-5 lead text-muted">
-                            Après un parcours atypique et riche en expériences, je me consacre aujourd’hui au développement Full Stack. Formé à la <a href="https://www.holbertonschool.fr/" target="_blank">Holberton School</a>, je mets ma rigueur, ma créativité et ma capacité d’adaptation au service de solutions web modernes et porteuses de sens.
+                            Après un parcours atypique et riche en expériences, je me consacre aujourd’hui au développement Full Stack. Formé à la <a href="https://www.holbertonschool.fr/" target="_blank">Holberton School</a>, je mets ma capacité d’adaptation, ma créativité, et ma rigueur,  et  au service de solutions web modernes et porteuses de sens.
                         </p>
 
                         <div class="d-flex flex-column flex-lg-row justify-content-center gap-3">
-                            <button class="btn btn-primary">
+                            <button class="btn btn-primary" type="button" aria-label="Resume download button">
                                 <i class="bi bi-file-earmark-person-fill me-2 "></i>Mon C.V.
                             </button>
 
@@ -123,11 +123,11 @@
         <div class="container py-4">
             <!-- Social media links -->
             <div class="d-flex justify-content-center align-items-center mb-2 ">
-                <a class="nav-link d-block me-4 fs-4" href="https://github.com/fchavonet" target="_blank"><i class="bi bi-github"></i></a>
+                <a class="nav-link d-block me-4 fs-4" href="https://github.com/fchavonet" target="_blank" aria-label="GitHub link"><i class="bi bi-github"></i></a>
 
-                <a class="nav-link d-block me-4 fs-4" href="https://www.instagram.com/pandolowitz/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a class="nav-link d-block me-4 fs-4" href="https://www.instagram.com/pandolowitz/" target="_blank" aria-label="Instagram link"><i class="bi bi-instagram"></i></a>
 
-                <a class="nav-link d-block fs-4" href="https://www.linkedin.com/in/fchavonet/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a class="nav-link d-block fs-4" href="https://www.linkedin.com/in/fchavonet/" target="_blank" aria-label="LinkedIn link"><i class="bi bi-linkedin"></i></a>
             </div>
 
             <!-- Cpyright -->
