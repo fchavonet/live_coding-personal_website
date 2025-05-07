@@ -28,10 +28,6 @@
 }
 
 /* GENERAL */
-section {
-    height: 100svh;
-}
-
 p a {
     text-decoration: none;
     color: var(--primary-color) !important;
@@ -39,6 +35,11 @@ p a {
 
 .theme-toggler {
     margin-top: 0.1rem;
+}
+
+/* CONTACT SECTION */
+#message {
+    resize: none;
 }
 
 /*************
@@ -78,6 +79,18 @@ p a {
 [data-bs-theme="light"] #works {
     background-color: var(--light-section-background-color);
     transition: background-color 0.1s ease-in-out;
+}
+
+/* CONTACT SECTION */
+[data-bs-theme="light"] #contact input {
+    border: none;
+    background-color: var(--light-section-background-color);
+}
+
+/* CONTACT SECTION */
+[data-bs-theme="light"] #contact textarea {
+    border: none;
+    background-color: var(--light-section-background-color);
 }
 
 /* FOOTER */
@@ -132,6 +145,17 @@ p a {
 [data-bs-theme="dark"] #works {
     background-color: var(--dark-section-background-color);
     transition: background-color 0.1s ease-in-out;
+}
+
+/* CONTACT SECTION */
+[data-bs-theme="dark"] #contact input {
+    border: none;
+    background-color: var(--dark-section-background-color);
+}
+
+[data-bs-theme="dark"] #contact textarea {
+    border: none;
+    background-color: var(--dark-section-background-color);
 }
 
 /* FOOTER */

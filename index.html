@@ -39,7 +39,7 @@
                     <span>|</span>
 
                     <!-- Theme toggle button -->
-                    <button class="theme-toggler btn border-0" type="button"  aria-label="Theme toggle button">
+                    <button class="theme-toggler btn border-0" type="button" aria-label="Theme toggle button">
                         <i class="bi bi-moon-fill"></i>
                     </button>
                 </div>
@@ -65,7 +65,7 @@
 
                         <li class="nav-item d-none d-lg-block">
                             <!-- Theme toggle button -->
-                            <button class="nav-link theme-toggler btn border-0" type="button"  aria-label="Theme toggle button">
+                            <button class="nav-link theme-toggler btn border-0" type="button" aria-label="Theme toggle button">
                                 <i class="bi bi-moon-fill"></i>
                             </button>
                         </li>
@@ -86,7 +86,7 @@
                         <h2 class="display-4 display-lg-2 mb-3 fw-bold gradient-text">Développeur Full Stack</h2>
 
                         <p class="mb-5 lead text-muted">
-                            Après un parcours atypique et riche en expériences, je me consacre aujourd’hui au développement Full Stack. Formé à la <a href="https://www.holbertonschool.fr/" target="_blank">Holberton School</a>, je mets ma capacité d’adaptation, ma créativité, et ma rigueur,  et  au service de solutions web modernes et porteuses de sens.
+                            Après un parcours atypique et riche en expériences, je me consacre aujourd’hui au développement Full Stack. Formé à la <a href="https://www.holbertonschool.fr/" target="_blank">Holberton School</a>, je mets ma capacité d’adaptation, ma créativité, et ma rigueur, au service de solutions web modernes et porteuses de sens.
                         </p>
 
                         <div class="d-flex flex-column flex-lg-row justify-content-center gap-3">
@@ -103,17 +103,49 @@
             </div>
         </section>
 
-        <!-- Works section (Réalisations) -->
+        <!-- Works section (Mes réalisations) -->
         <section id="works">
             <div class="container">
-                <h2>Réalisations</h2>
+                <h2 class="text-center">
+                    Mes réalisations
+                </h2>
             </div>
         </section>
 
         <!-- Contact section (Contact) -->
         <section id="contact">
             <div class="container">
-                <h2>Contact</h2>
+                <div class="row justify-content-center align-items-center py-5">
+                    <div class="col-12 col-lg-8">
+                        <h2 class="mb-3 text-center">
+                            Contactez moi<i class="bi bi-envelope-paper-heart ms-3"></i>
+                        </h2>
+
+                        <!-- Contact form -->
+                        <form action="" method="POST">
+                            <div class="mb-3">
+                                <label class="form-label" for="name">Nom :</label>
+                                <input id="name" class="form-control" name="name" type="text" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="email">E-mail :</label>
+                                <input id="email" class="form-control" name="email" type="email" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="message">Message :</label>
+                                <textarea id="message" class="form-control" name="message" rows="10" required></textarea>
+                            </div>
+
+                            <div class="mt-5 text-center">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="bi bi-envelope-fill me-2"></i>Envoyer
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
