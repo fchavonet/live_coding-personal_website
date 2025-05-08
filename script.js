@@ -36,7 +36,9 @@ themeTogglers.forEach(function (themeToggler) {
 	const icon = themeToggler.querySelector("i");
 	updateIcon(icon, currentTheme);
 
-	themeToggler.addEventListener("click", function () {
+	themeToggler.addEventListener("click", function (event) {
+		event.preventDefault();
+
 		// Toggle the theme.
 		if (currentTheme === "light") {
 			currentTheme = "dark";
@@ -54,26 +56,52 @@ themeTogglers.forEach(function (themeToggler) {
 });
 
 
-/***********************************************
-* CALCULATE HEADER HEIGHT FOR SECTIONS PADDING *
-***********************************************/
+/*********************************************
+ * SMOOTH SCROLLING ADJUSTED FOR FIXED HEADER *
+ *********************************************/
 
+// Reference the header element and compute its height.
 const header = document.querySelector("header");
-// const sections = document.querySelectorAll("section");
-const aboutSection = document.getElementById("about");
+const headerHeight = header.offsetHeight;
 
-function updateSectionsPadding() {
-	// Get the header's current height.
-	const headerHeight = header.offsetHeight;
+// Select all internal anchor links (href starting with "#").
+const anchors = document.querySelectorAll('a[href^="#"]');
 
-	// Set all the section's top padding equal to the header height.
-	// sections.forEach(function (section) {
-	// 	section.style.paddingTop = headerHeight + "px";
-	// });
+anchors.forEach(function (anchor) {
+	anchor.addEventListener("click", function (event) {
+		event.preventDefault();
 
-	aboutSection.style.paddingTop = headerHeight - 32 + "px";
-}
+		// Retrieve the target section element from the link's href.
+		const targetId = anchor.getAttribute("href");
+		const targetSection = document.querySelector(targetId);
 
-// Update padding on load and when the window is resized.
-updateSectionsPadding();
-window.addEventListener("resize", updateSectionsPadding);
+		// Exit if the section does not exist.
+		if (!targetSection) {
+			return;
+		}
+
+		// Compute the section's top position relative to the document.
+		const sectionTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
+
+		// Determine whether to apply the header offset.
+		let offsetToApply;
+		if (targetSection.hasAttribute("data-no-scroll-offset")) {
+			// If the section has data-no-scroll-offset, do not apply any offset.
+			offsetToApply = 0;
+		} else {
+			// Otherwise, always subtract the header height.
+			offsetToApply = headerHeight;
+		}
+
+		// Calculate the final scroll position.
+		const scrollToPosition = sectionTop - offsetToApply;
+
+		// Smooth scroll to the calculated position.
+		window.scrollTo({
+			top: scrollToPosition,
+			behavior: "smooth"
+		});
+
+		window.dispatchEvent(new Event("scroll"));
+	});
+});

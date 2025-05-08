@@ -28,6 +28,10 @@
 }
 
 /* GENERAL */
+body {
+    position: relative;
+}
+
 p a {
     text-decoration: none;
     color: var(--primary-color) !important;
@@ -35,6 +39,24 @@ p a {
 
 .theme-toggler {
     margin-top: 0.1rem;
+}
+
+/* ABOUT SECTION */
+#about {
+    height: 100svh;
+}
+
+/* WORKS SECTION */
+.carousel-btn {
+    font-size: 2rem;
+    color: var(--primary-color);
+    border: none;
+    background-color: transparent;
+    transition: transform 0.2s ease-in-out;
+}
+
+.carousel-btn:active {
+    transform: scale(0.5);
 }
 
 /* CONTACT SECTION */
@@ -76,7 +98,7 @@ p a {
 }
 
 /* WORKS SECTION */
-[data-bs-theme="light"] #works {
+[data-bs-theme="light"] #carousel-caption {
     background-color: var(--light-section-background-color);
     transition: background-color 0.1s ease-in-out;
 }
@@ -142,7 +164,7 @@ p a {
 }
 
 /* WORKS SECTION */
-[data-bs-theme="dark"] #works {
+[data-bs-theme="dark"] #carousel-caption {
     background-color: var(--dark-section-background-color);
     transition: background-color 0.1s ease-in-out;
 }

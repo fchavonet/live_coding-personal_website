@@ -78,7 +78,7 @@
     <!-- MAIN -->
     <main>
         <!-- About section (À propos) -->
-        <section id="about" class="min-vh-100 d-flex justify-content-center align-items-center text-center">
+        <section id="about" class="d-flex justify-content-center align-items-center text-center" data-scroll-offset>
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 col-lg-8">
@@ -104,16 +104,75 @@
         </section>
 
         <!-- Works section (Mes réalisations) -->
-        <section id="works">
+        <section id="works" class="text-center" data-scroll-offset>
             <div class="container">
-                <h2 class="text-center">
-                    Mes réalisations
-                </h2>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <h2 class="display-5 m-0 fw-lighter">Mes réalisations</h2>
+                        <h3 class="display-4 display-lg-2 mb-3 fw-bold gradient-text">Holberton Survivors</h3>
+
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                            <!-- Carousel prev button -->
+                            <button class="carousel-btn d-none d-lg-block" type="button" data-bs-target="#works-carousel" data-bs-slide="prev">
+                                <i class="bi bi-arrow-left-circle"></i>
+                                <span class="visually-hidden">Précédent</span>
+                            </button>
+
+                            <div class="position-relative">
+                                <!-- MacBook Pro bezel -->
+                                <img class="img-fluid position-relative z-1" src="./assets/images/carousel/macbook_pro-bezel.webp" alt="MacBook Pro bezel">
+
+                                <!-- Works carousel -->
+                                <div id="works-carousel" class="carousel slide position-absolute" style="width: 83%; top: 2%; left: 50%; transform: translateX(-50%);">
+                                    <div class="carousel-inner">
+                                        <!-- First project -->
+                                        <div class="carousel-item active">
+                                            <img class="w-100 d-block" src="./assets/images/carousel/works-holberton_survivors.webp" alt="Capture d'écran du projet Holberton Survivors">
+                                        </div>
+
+                                        <!-- Second project -->
+                                        <div class="carousel-item">
+                                            <img class="w-100 d-block" src="./assets/images/carousel/works-holberton_survivors.webp" alt="Capture d'écran du projet Holberton Survivors">
+                                        </div>
+
+                                        <!-- Third project -->
+                                        <div class="carousel-item">
+                                            <img class="w-100 d-block" src="./assets/images/carousel/works-holberton_survivors.webp" alt="Capture d'écran du projet Holberton Survivors">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Carousel next button -->
+                            <button class="carousel-btn d-none d-lg-block" type="button" data-bs-target="#works-carousel" data-bs-slide="next">
+                                <i class="bi bi-arrow-right-circle"></i>
+                                <span class="visually-hidden">Suivant</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caroussel caption -->
+            <div id="carousel-caption" class="container-fluid d-flex justify-content-center align-items-center py-5">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-12 col-lg-8">
+                        <p id="carousel-caption-text" class="m-0 p-0 text-muted">
+                            Dans le cadre de ma formation à la Holberton School, j’ai co-développé avec <a href="https://github.com/SpStigma" target="_blank">Yoann Rivet</a> un jeu vidéo inspiré de <a href="https://store.steampowered.com/app/1794680/Vampire_Survivors/" target="_blank">Vampire Survivors</a>, réalisé en deux mois avec Unity et C#, sans connaissance préalable de ces outils. Présenté en anglais devant un jury de professionnels lors de notre soutenance finale, ce projet a mobilisé nos compétences en développement logiciel, gestion de projet et travail d’équipe, contribuant à l’obtention de notre diplôme.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid d-flex justify-content-center align-items-center py-3">
+                <a class="btn btn-primary" href="https://www.holbertonsurvivors.com" target="_blank">
+                    Accéder au projet
+                </a>
             </div>
         </section>
 
         <!-- Contact section (Contact) -->
-        <section id="contact">
+        <section id="contact" data-no-scroll-offset>
             <div class="container">
                 <div class="row justify-content-center align-items-center py-5">
                     <div class="col-12 col-lg-8">
