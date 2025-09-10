@@ -46,6 +46,10 @@ p a {
     height: 100svh;
 }
 
+#works {
+    height: calc(100svh - 4.75rem);
+}
+
 /* WORKS SECTION */
 .carousel-btn {
     font-size: 2rem;
@@ -56,7 +60,13 @@ p a {
 }
 
 .carousel-btn:active {
-    transform: scale(0.5);
+    transform: scale(0.8);
+}
+
+#carousel-caption-text {
+    height: 100px;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 /* CONTACT SECTION */
