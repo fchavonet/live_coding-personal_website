@@ -63,7 +63,7 @@ git clone https://github.com/fchavonet/live_coding-personal_website.git
 
 3. Modify the content to make it your own!
 
-You can also test the web application online by clicking [here](https://fchavonet.github.io/live_coding-personal_website/).
+You can also test the project online by clicking [here](https://fchavonet.github.io/live_coding-personal_website/).
 
 <table>
     <tr>
